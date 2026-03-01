@@ -26,3 +26,7 @@ docs/latex/
 *.db
 build_dir_env.txt 
 build_dir_linux.txt
+
+#zig
+.zig-cache/
+zig-out/

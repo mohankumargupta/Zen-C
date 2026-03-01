@@ -167,7 +167,9 @@ static void load_facts(void)
 void zen_init(void)
 {
     // Seed random with current time
-    srand((unsigned int)(z_get_time() * 1000.0) ^ z_get_pid());
+    //srand((unsigned int)(z_get_time() * 1000.0) ^ z_get_pid());
+    srand(((unsigned int)((unsigned long long)(z_get_time() * 1000.0) & 0xFFFFFFFFU)) ^ z_get_pid());
+
 }
 
 // Global helper to print.
