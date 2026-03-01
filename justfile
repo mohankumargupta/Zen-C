@@ -7,10 +7,10 @@ _main:
     @just --list
 
 build program="helloworld":
-    {{ zc }} build --cc zig {{ program }}.zc -o {{ program }}
+    {{ zc }} build --cc zig {{ program }}.zc -o {{ program }}.exe
 
 release program="helloworld":
-    {{ zc }} build --cc zig -Os -W -s {{ program }}.zc -o {{ program }}
+    {{ zc }} build --cc zig -Os -W -s {{ program }}.zc -o {{ program }}.exe
 
 run program="helloworld":
-    {{ zc }} run --cc zig {{ program }}.zc -o {{ program }}
+    {{ zc }} run --cc zig {{ program }}.zc -o {{ program }}.exe
